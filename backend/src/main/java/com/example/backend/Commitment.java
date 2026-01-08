@@ -6,22 +6,23 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 
-@Entity
+@Entity // This annotation tells JPA to create a table in the database for this class
 
-
+// Making the commitment class
 public class Commitment {
 
+    // This annotation tells JPA to create a primary key for the commitment table
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 
     private Long id;
     private String userId;
     private String title;
-    private String description;
-    private Boolean check;
     private LocalDateTime dueDate;
+    
 
-    //Commitment Overdue Check
+   
+    // Checks if the commitment has expired
     public boolean hasExpired() {
        LocalDateTime currentTime = LocalDateTime.now();
        if(currentTime.isAfter(dueDate)){

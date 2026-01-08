@@ -1,0 +1,50 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "maven.view": "hierarchical",
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home",
+            "default": true
+        }
+    ],
+    
+    // Disable ALL code suggestions and auto-completion
+    "editor.inlineSuggest.enabled": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggest.showStatusBar": false,
+    "editor.tabCompletion": "off",
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.parameterHints.enabled": false,
+    
+    // Keep Java language server enabled for dependency resolution
+    // But disable autocomplete suggestions in editor
+    "java.completion.enabled": true,
+    "java.completion.overwrite": false,
+    "java.signatureHelp.enabled": false,
+    
+    // Disable Cursor AI suggestions (the gray inline text)
+    "cursor.cpp.disabledLanguages": ["*"],
+    "cursor.chat.enabled": false,
+    "cursor.general.enableTabCompletion": false,
+    "cursor.general.enableInlineCompletion": false,
+    "cursor.general.enableAutocomplete": false,
+    "cursor.autocomplete.enabled": false,
+    "cursor.inlineCompletion.enabled": false,
+    
+    // Disable Copilot features
+    "github.copilot.enable": {
+        "*": false
+    },
+    "github.copilot.editor.enableAutoCompletions": false
+}
